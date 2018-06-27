@@ -3924,4 +3924,11 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
+
+
+$(document).ready(function(){
+  $("#collappse2").click(function(){
+      $("#collapseOne").addClass("show");
+  });
+});
 //# sourceMappingURL=bootstrap.js.map
