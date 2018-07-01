@@ -20,4 +20,10 @@ Route::get('/HomeEstudiante','EstudianteController@home');
 
 Route::get('/HomeProfesor','ProfesorController@home');
 
-Route::get('/HomeAdministrador','AdministradorController@home');
+
+//Administrador
+Route::get('/Cursos','AdministradorController@cursos')->name('Cursos.Admin');
+
+Route::get('/Examenes','AdministradorController@examenes')->name('examenes.Admin');
+
+Route::get('/Profesores','AdministradorController@profesores')->name('profesores.Admin');

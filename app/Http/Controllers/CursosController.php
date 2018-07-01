@@ -21,6 +21,6 @@ class CursosController extends Controller
         $curso->save();
 
         //Session::flash('message','Conductor Agregado Correctamente');
-        return redirect('home')->with('status', 'Agregado Correctamente');;
+        return redirect()->action('AdministradorController@cursos')->with('status', 'Agregado Correctamente');
     }
 }

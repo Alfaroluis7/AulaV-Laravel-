@@ -3926,9 +3926,5 @@
 })));
 
 
-$(document).ready(function(){
-  $("#collappse2").click(function(){
-      $("#collapseOne").addClass("show");
-  });
-});
+
 //# sourceMappingURL=bootstrap.js.map

@@ -11,10 +11,15 @@
      <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!--Scripts -->
+    
 
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/bootstrap.js') }}" defer></script>
-    <script src="{{ asset('js/jquery.min.js') }}" defer></script>
+    <script src="{{ asset('js/pickadate.js-3.5.6/tests/jquery.1.7.0.js') }}" defer></script>
+    <script src="{{ asset('js/pickadate.js-3.5.6/lib/picker.js') }}" defer></script>
+    <script src="{{ asset('js/pickadate.js-3.5.6/lib/picker.date.js') }}"  defer></script>
+    <script src="{{ asset('js/pickadate.js-3.5.6/lib/legacy.js') }}" defer></script>
+    <script src="{{ asset('js/todo.js') }}" defer></script>
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 

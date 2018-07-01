@@ -32,7 +32,7 @@ class HomeController extends Controller
         else if($user->tipoUsuario_id==2)
         return redirect()->action('EstudianteController@home');
         else {
-            return redirect()->action('AdministradorController@home');
+            return redirect()->action('AdministradorController@cursos');
         }
     }
 }

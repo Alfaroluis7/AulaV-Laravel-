@@ -16,9 +16,10 @@ class Cursos extends Migration
         Schema::create('cursos', function (Blueprint $table) {
         $table->increments('id');
         $table->string('nombre');
-        $table->string('Descripcion');      
+        $table->string('Descripcion');
+        $table->date('Fecha_Inicio');
+        $table->date('Fecha_Fin');
         $table->timestamps();
-          
     });
       
     }

@@ -7,10 +7,22 @@ Use App\cursos;
 
 class AdministradorController extends Controller
 {
-   public function home(){
+   public function cursos(){
     
-    $cursos = cursos::paginate(5);
- 
+    $cursos = cursos::paginate(6);
+
     return view('Administrador.cursos', ['cursos' => $cursos]);
    }
+
+   public function examenes(){
+ 
+    return view('Administrador.examenes');
+   }
+
+   public function profesores(){
+ 
+    return view('Administrador.Profesores');
+   }
+
+
 }
