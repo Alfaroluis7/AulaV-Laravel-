@@ -16,6 +16,8 @@
     <script src="{{ asset('js/bootstrap.js') }}" defer></script>
     <script src="{{ asset('js/jquery.min.js') }}" defer></script>
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
 
 </head>
 <body>

@@ -11,6 +11,6 @@ class AdministradorController extends Controller
     
     $cursos = cursos::paginate(5);
  
-    return view('Administrador', ['cursos' => $cursos]);
+    return view('Administrador.cursos', ['cursos' => $cursos]);
    }
 }
