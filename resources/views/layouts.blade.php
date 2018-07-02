@@ -15,10 +15,8 @@
 
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/bootstrap.js') }}" defer></script>
-    <script src="{{ asset('js/pickadate.js-3.5.6/tests/jquery.1.7.0.js') }}" defer></script>
-    <script src="{{ asset('js/pickadate.js-3.5.6/lib/picker.js') }}" defer></script>
-    <script src="{{ asset('js/pickadate.js-3.5.6/lib/picker.date.js') }}"  defer></script>
-    <script src="{{ asset('js/pickadate.js-3.5.6/lib/legacy.js') }}" defer></script>
+    <script src="{{ asset('js/jquery.mim.js') }}" defer></script>
+
     <script src="{{ asset('js/todo.js') }}" defer></script>
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -26,7 +24,7 @@
 
 </head>
 <body>
-
+    
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark2 ">
     <a class="navbar-brand ml-lg-5" href="{{ url('/') }}">AulaV</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,7 +60,7 @@
             @yield('content')
         </div>
     </div>
-
+  
     
 </body>
 </html>

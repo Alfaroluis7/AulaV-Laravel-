@@ -39,10 +39,13 @@
             </ul>
           </div>
         </nav>
-        
+  
+                     
+                
         <main role="main" class="col-xs-2 col-sm-10 col-md-10 col-lg-10  px-4"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">Cursos</h1>
+            
             <div class="btn-toolbar mb-2 mb-md-0 mr-5">
                 <button class="btn btn-outline-secondary " type="button" data-toggle="modal" data-target="#example" data-whatever="@mdo">Agregar Curso</button>
             </div>
@@ -84,9 +87,11 @@
           </div>
           </div>
 
+          
 
-    <div class="modal fade" id="example" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+
+    <div class="modal fade bd-example-modal-lg" id="example" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
               <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel">Nuevo Curso</h5>
@@ -99,39 +104,34 @@
                     @csrf
                     <div class="form-group">
                       <label for="recipient-name" class="col-form-label">Nombre del Curso:</label>
-                      <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                      <input id="name" type="text" class="border border-secondary form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
                     </div>
+                    <label for="input_01">Fecha Inicio:</label>
+                    <input class="rounded border border-secondary" type="date" name="bday">
+                    <br>
+                    <label for="input_01">Fecha Finalizacion:</label>
+                    <input class="rounded border border-secondary" type="date" name="bday">
                       <div class="form-group">
                       <label for="message-text" class="col-form-label">Descripcion:</label>
-                      <textarea class="form-control{{ $errors->has('descripcion') ? ' is-invalid' : '' }}" name="descripcion" value="{{ old('descripcion') }}" required autofocus id="descripcion" rows="3"></textarea>
-                      <fieldset>
-                <h3><label for="input_01">Fecha</label></h3>
-
-             
-                <input
-                    id="input_01"
-                    class="datepicker"
-                    name="date"
-                    type="text"
-                    autofocuss
-                    value="14 August, 2014"
-                    data-valuee="2014-08-08">
-           
-
-                <br><br><br><br><br>
-                <!-- <button type="button">Disable all dates</button>
-                <input class="button" type="submit" value="open"> -->
-            </fieldset>
+                      <textarea class="border border-secondary form-control{{ $errors->has('descripcion') ? ' is-invalid' : '' }}" name="descripcion" value="{{ old('descripcion') }}" required autofocus id="descripcion" rows="3"></textarea>
+                     
+                 
+                     
+                        
                       <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                       <button type="submit" class="btn btn-primary">Guardar Curso</button>
                     </div>
                     </div>
                 </form>
+                
               </div>
         </div>
       </div>
    </div>
- 
+
+  
+  
+
 
 @endsection
