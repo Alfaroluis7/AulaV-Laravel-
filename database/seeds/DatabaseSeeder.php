@@ -38,7 +38,8 @@ class DatabaseSeeder extends Seeder
                 'nombre' => 'Matematicas '.($i+1),
                 'Descripcion' => 'ESTA MIERDA ES UY ARRECHA Y NO SE QUE PONER '.($i+2),
                 'Fecha_Inicio' => '2018-07-01 22:21:30',
-                'Fecha_Fin' => '2018-07-01 22:21:30'
+                'Fecha_Fin' => '2018-07-01 22:21:30',
+                'costo' => '2000',
             ]);
         }
     }

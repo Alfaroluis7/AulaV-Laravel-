@@ -11,17 +11,15 @@
      <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!--Scripts -->
+
+    <script src="{{ asset('js/bootstrap.js') }}" defer></script>
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/todo.js') }}" defer></script>
+    @section('editarC')
+    @show
     
 
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/bootstrap.js') }}" defer></script>
-    <script src="{{ asset('js/jquery.mim.js') }}" defer></script>
-
-    <script src="{{ asset('js/todo.js') }}" defer></script>
-
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-
 </head>
 <body>
     
@@ -54,13 +52,15 @@
             </ul>
         </div>
     </nav>
-
+    @if (session('NO'))
+            <div class="alert alert-danger"  data-dismiss="alert">
+                {{ session('NO') }}
+            </div>
+    @endif
     <div id="body">
         <div>
             @yield('content')
         </div>
     </div>
-  
-    
 </body>
 </html>

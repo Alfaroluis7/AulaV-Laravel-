@@ -19,6 +19,7 @@ class Cursos extends Migration
         $table->string('Descripcion');
         $table->date('Fecha_Inicio');
         $table->date('Fecha_Fin');
+        $table->integer('costo');
         $table->timestamps();
     });
       

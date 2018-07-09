@@ -54,7 +54,7 @@ class RegisterController extends Controller
             'password' => 'required|string|min:6|confirmed',
         ];
 
-        return Validator::make($data,$rules ,$messages);
+        return Validator::make($data,$rules,$messages);
     }
 
     /**
@@ -63,6 +63,7 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
+
     protected function create(array $data)
     {   
         $tipoUsuario = 2;
