@@ -96,9 +96,19 @@ class CursosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
+    public function update(Request $request)
+    {   
+        
+        $curso = cursos::find($request->id);
+        $curso->nombre = $request->name;
+        $curso->Fecha_Inicio = $request->Inicio;
+        $curso->Fecha_Fin = $request->Finalizacion;
+        $curso->costo =  $request->costo;
+        $curso->Descripcion = $request->descripcion;
+        $curso->save();
+
+
+        return response()->json($curso);
     }
 
     /**

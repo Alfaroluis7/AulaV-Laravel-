@@ -49,7 +49,7 @@
                   </button>
               </div>
               <div class="modal-body">
-                  <form method="POST" action="{{route('Curso.Add')}}">
+                  <form method="POST" action="{{route('Curso.Actualizar')}}">
                     @csrf
                     <div class="form-group">
                       <label for="recipient-name" class="col-form-label">Nombre del Curso:</label>
@@ -66,9 +66,10 @@
                       <div class="form-group">
                       <label for="message-text" class="col-form-label">Descripcion:</label>
                       <input class="border border-secondary form-control{{ $errors->has('descripcion') ? ' is-invalid' : '' }}" name="descripcion" value="{{$curso->Descripcion}}" required autofocus id="descripcion2" rows="3"></input>
+                      <input type="hidden" id="idid" name="id">
                       <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                      <button type="submit" class="btn btn-primary">Guardar Curso</button>
+                      <button id="Act" type="button" class="btn btn-primary">Guardar Curso</button>
                     </div>
                     </div>
                 </form>

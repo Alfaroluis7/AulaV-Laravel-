@@ -24,7 +24,15 @@ Route::post('/AddCurso','CursosController@store')->name('Curso.Add');
 
 Route::get('/Curso/{id}/Eliminar', 'CursosController@destroy')->name('EliminarCurso');
 
-Route::get('/Curso/{id}/Edit', 'CursosController@edit')->middleware('cors');
+Route::get('/Curso/{id}/Edit', 'CursosController@edit')->name('Curso.Edit')->middleware('cors');
+
+Route::post('/Curso/Actualizar','CursosController@update')->name('Curso.Actualizar')->middleware('cors');
+
+//Route::post('/Curso/Actualizar', function(){
+//    return 'Entro';
+//})->name('Curso.Actualizar')->middleware('cors');
+
+
 
 //Administrador
 Route::get('/Cursos','AdministradorController@cursos')->name('Cursos.Admin')->middleware('Admin');

@@ -40,13 +40,14 @@
                   <td>{{ $curso->Fecha_Inicio}}</td>
                   <td>{{ $curso->Fecha_Fin}}</td>
                   <td>
-                    <button class="btn btn-warning" type="button" data-toggle="modal" data-target="#example2" data-whatever="@mdo" value="{{$curso->id}}" onClick="Mostrar(this)">
+                    <form action="{{route('Curso.Edit', $curso->id)}}">
+                    <button class="btn btn-warning" type="button" data-toggle="modal" data-target="#example2" data-whatever="@mdo" value="{{$curso->id}}">
                     @csrf
                         <svg id="i-edit" viewBox="0 0 32 32" width="19" height="19" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                         <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" /> 
                         </svg>
                     </button>
-                  
+                    </form>
                   </td>
 
                   <td><a href="{{route('EliminarCurso', $curso->id)}}" onclick="return confirm('¿Seguro Desea Eliminar este Curso?')">
